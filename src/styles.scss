@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+  font-family: 'Lato', sans-serif;
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  @media (min-width: 600px) {
+      font-size: 50%;
+  }
+}
+
+/* reset */
+h1,h2,h3,h4,h5,p{
+  padding: 0;
+  margin: 0;
+}
+
+/* common class */
+
+.d-flex-column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.d-flex-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

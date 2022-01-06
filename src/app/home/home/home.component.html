@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="top">
+    <div class="top-heading">
+      <h3>Color A Word</h3>
+    </div>
+    <div class="top-searchbar d-flex-column">
+      <input
+        type="text"
+        autofocus="autofocus"
+        placeholder="Type any word"
+        (keyup)="searchImages($event)"
+      />
+    </div>
+  </div>
+
+  <div class="bottom">
+    <ngx-masonry [options]="{ gutter: 15 }">
+      <div ngxMasonryItem class="masonry-item" *ngFor="let item of searchResult">
+        <div class="bottom-color d-flex-column" [ngStyle]="{'background-color': item.color}">
+          #h89867738
+        </div>
+        <img src="{{item.urls.small}}">
+     </div>
+    </ngx-masonry>
+
+  </div>
+</div>
